@@ -4,6 +4,7 @@ import React from "react";
 const MoviesList=(Data)=>{
 
 let movieData=Data.data;
+// console.log(Data.setMovielists);
 
 
     return(
@@ -12,7 +13,12 @@ let movieData=Data.data;
       { 
        movieData.map((iteam,index)=>(
        
-            <p onClick={} key={index}> {iteam.title}</p>
+            <p onClick={()=>{
+
+           Data.setMovielists(iteam) 
+
+        //    console.log(iteam);
+        }} key={index}> {iteam.title}</p>
        ))
         }
     </div>)
